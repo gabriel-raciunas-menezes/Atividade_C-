@@ -1,0 +1,6 @@
+ano:1
+n_alunos:1
+turma:1
+horario:1
+materias:1
+professor_responsavel:1
