@@ -1,0 +1,9 @@
+1. Criar uma classe sobre o tema, com no mínimo seis atributos;
+2. Criando um método que grave os dados dos atributos em um arquivo txt; (modelo.txt)
+3. A classe fará a leitura dos dados que serão gravados;
+4. Os dados são gravados em um arquivo: txt.
+Um membro da equipe envia.
+
+Integrante - Cladio Jng Lin Jian 761914 - Gabriel Raciunas de Menezes 761543
+
+tema - Cadastro de Escolas de 1° grau
