@@ -51,12 +51,12 @@ class keyValuePair{
         unsigned int typeofValue(){return currType;}
         unsigned int loadFromString(const string &input, bool set = true){
             try{
+                cout << "loading!" << input << endl;
                 size_t pos;
                 int res = stoi(input, &pos);
 
                 if(pos != input.length() || res> UINT_MAX) {
                     if(set) __str_value = input;
-
                     currType = TYPE_STR;
                     return TYPE_STR;
                 }
@@ -66,10 +66,10 @@ class keyValuePair{
                 }
 
                 if(set) unsigned_int_value = (unsigned int)res;
-
                 currType = TYPE_STR;
                 return TYPE_UNSIGNED_INT;
             }catch(const exception&){
+
                 return UNDEFINED;
             }
         }
@@ -123,14 +123,16 @@ class Tabela{
 
             const bool ferr = __fptr->bad();
             __fptr->close();
-            if(bufferList.empty() || ferr) {
+            if(ferr) {
                 cout << "ERROR: " << bufferList.empty() << " | " << ferr <<endl;
                 return false;
             }
-            
-            
-            datas = move(bufferList);
+
             dataLoaded = true;
+            if(buffer.empty()) return true;
+        
+            datas = move(bufferList);
+            
             return true;
         }
 
